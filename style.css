@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&display=swap");
 :root {
   --body-color: #fff;
+  --dark-body: rgb(64, 66, 88);
   --font-family: "Poppins", sans-serif;
-  --hue-color: 217;
+  --font-family2: "Josefin Sans", sans-serif;
+  --hue-color: 243;
+
   --first-color: hsla(var(--hue-color), 76%, 52%, 1);
   --second-color: hsla(var(--hue-color), 49%, 55%, 1);
   --third-color: hsla(var(--hue-color), 31%, 59%, 1);
@@ -36,6 +40,7 @@ header {
   margin-top: 1.2rem;
 }
 .menu-toggle {
+  background: var(--body-color);
   position: relative;
   display: flex;
   align-items: center;
@@ -44,6 +49,7 @@ header {
   width: max-content;
   margin-top: 1em;
   border-radius: 1rem;
+  z-index: 1;
 }
 .nav-link {
   z-index: 1;
@@ -84,8 +90,8 @@ header {
 .sub_header {
   display: flex;
   width: 100%;
-  height: 100%;
-  margin: 1rem 2rem;
+  justify-content: center;
+  margin-top: 3.5rem;
   height: 70%;
 }
 #main_heading {
@@ -93,8 +99,8 @@ header {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  width: 50%;
-  margin: 0 2.1rem;
+  width: 60%;
+  margin: 0 3.1rem;
 }
 .h1 {
   display: flex;
@@ -148,27 +154,141 @@ header {
 .nav-link > .uil {
   display: none;
 }
- .myImg{
-  
-  display: block;
-  margin-right: 3rem;
-  height: calc(100% 2);
-  width: calc(100% / 2);
- }
- /* // About section Css */
- #about-section{
+
+/* // About section Css */
+section {
+  margin-top: 4rem;
+}
+.about-section {
+  z-index: -1;
   width: 100%;
-  display: block;
- }
- #about-section-container{
+  margin-top: 1.5rem;
+
+  position: relative;
+  height: max-content;
+}
+.about-section-container {
   display: flex;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 3px 3px 5px 3px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  flex-direction: row;
   justify-content: center;
- }
- #about-section-container > h1{
-  text-shadow:2px 1px 6px rgb(0, 0, 0);
- }
+  align-items: center;
+  margin: 1rem 3rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.about-section::before {
+  content: "";
+  background: url("assets/Gradient_blob.svg");
+  z-index: -1;
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  height: 9rem;
+  width: 9rem;
+}
+.about-section::after {
+  content: "";
+  background: url("assets/Gradient_blob.svg");
+  z-index: -1;
 
+  position: absolute;
+  right: -1rem;
+  bottom: -3rem;
 
+  height: 9rem;
+  width: 9rem;
+}
+.about-section-container-img {
+  display: block;
+  background: url("img/Utkarsh-about.jpeg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-radius: 1.2rem;
+  height: 12rem;
+  width: calc(100% / 2);
+}
+.about-section-container-describe {
+  display: flex;
+  width: calc(100% / 2);
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 1.2rem;
+  margin-left: 1rem;
+}
+.about-section-container-describe > h1 {
+  font-family: var(--font-family2);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.about-section-container-describe > h1 > span {
+  color: var(--first-color);
+}
+.sub-tittle {
+  color: var(--second-color);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.about-section-container-describe > p {
+  font-family: var(--font-family);
+  color: var(--dark-body);
+  font-weight: 500;
+  size: 1rem;
+}
+.myImgP {
+  display: block;
+  height: 11rem;
+  width: 26.5rem;
+
+  margin-right: 4rem;
+  position: relative;
+}
+.myImg {
+  margin-top: 2rem;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 30%;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: animate 9s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+.myImg2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.myImg > .myImg2 > span {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 13.5rem;
+  height: 100%;
+  background: linear-gradient(var(--body-color), var(--first-color));
+  transform: rotateY(calc(90deg * var(--i))) translateZ(6.5rem);
+}
 @media only screen and (max-width: 768px) {
   .menu-toggle {
     position: fixed;
@@ -230,18 +350,17 @@ header {
   /* heading  */
 
   .sub_header {
-   
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     margin: 1rem 0;
-    height:max-content;
+    height: max-content;
     flex-wrap: wrap-reverse;
   }
   #main_heading {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     flex-direction: column;
     justify-content: center;
     height: 100%;
@@ -251,7 +370,7 @@ header {
   .h1 {
     display: flex;
     flex-wrap: wrap;
-  justify-content: center;
+    justify-content: center;
     position: relative;
     font-family: var(--font-family);
     font-size: 2rem;
@@ -272,12 +391,8 @@ header {
     width: 3px;
     animation: blink 1s infinite;
   }
-  .myImg{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    display: block;
-    width: calc(100% /2);
-    height: calc(100% /2);
+
+  .about-section-container {
+    flex-wrap: wrap;
   }
- 
 }
