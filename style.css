@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&display=swap");
+/* Variables in css  */
 :root {
   --body-color: #fff;
   --dark-body: rgb(64, 66, 88);
@@ -24,6 +25,7 @@ header {
   height: 22rem;
   background: var(--body-color);
 }
+/* -----------------NavBar Css -- */
 .navbar {
   display: flex;
   flex-direction: row;
@@ -86,7 +88,7 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-/* header decoration  */
+/* ----------------header decoration  */
 .sub_header {
   display: flex;
   width: 100%;
@@ -94,22 +96,23 @@ header {
   margin-top: 3.5rem;
   height: 70%;
 }
+/* Heading line with Typing Decoration  */
 #main_heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
   width: 60%;
-  margin: 0 3.1rem;
+  margin: 0 2.1rem;
 }
-.h1 {
+.main_heading_h1 {
   display: flex;
   position: relative;
   font-family: var(--font-family);
   font-size: 2.5rem;
   font-weight: 600;
 }
-#discribe {
+#main_heading_sub_h1 {
   font-family: var(--font-family);
   font-size: 1rem;
   font-weight: 500;
@@ -126,7 +129,6 @@ header {
   margin-left: 1rem;
   color: var(--first-color);
 }
-
 .cursor.typing {
   animation: none;
 }
@@ -147,13 +149,13 @@ header {
     background-color: rgb(0, 0, 0);
   }
 }
-
 .container p span.cursor.typing {
   animation: none;
 }
 .nav-link > .uil {
   display: none;
 }
+/* Header Decoration with things  */
 
 /* // About section Css */
 section {
@@ -243,53 +245,8 @@ section {
   font-weight: 500;
   size: 1rem;
 }
-.myImgP {
-  display: block;
-  height: 11rem;
-  width: 26.5rem;
-
-  margin-right: 4rem;
-  position: relative;
-}
-.myImg {
-  margin-top: 2rem;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 30%;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 100%;
-  transform-style: preserve-3d;
-  animation: animate 9s linear infinite;
-}
-@keyframes animate {
-  0% {
-    transform: rotateX(-30deg) rotateY(0deg);
-  }
-  100% {
-    transform: rotateX(-30deg) rotateY(360deg);
-  }
-}
-.myImg2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-}
-.myImg > .myImg2 > span {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 13.5rem;
-  height: 100%;
-  background: linear-gradient(var(--body-color), var(--first-color));
-  transform: rotateY(calc(90deg * var(--i))) translateZ(6.5rem);
-}
 @media only screen and (max-width: 768px) {
+  /* Header Responsiveness  */
   .menu-toggle {
     position: fixed;
     bottom: 0;
@@ -329,12 +286,10 @@ section {
   .nav-link > a {
     display: none;
   }
-
   .nav-link > .uil {
     display: block;
     font-size: 1.5rem;
   }
-
   #slider {
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
     display: block;
@@ -347,14 +302,13 @@ section {
     background: var(--first-color);
     transition: all 0.3s ease-in-out;
   }
-  /* heading  */
-
+  /* heading Responsiveness  */
   .sub_header {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    margin: 1rem 0;
+    margin: 0rem 0;
     height: max-content;
     flex-wrap: wrap-reverse;
   }
@@ -367,7 +321,7 @@ section {
     width: 100%;
     margin: 0;
   }
-  .h1 {
+  .main_heading_h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -376,7 +330,7 @@ section {
     font-size: 2rem;
     font-weight: 600;
   }
-  #discribe {
+  #main_heading_sub_h1 {
     text-align: center;
     font-family: var(--font-family);
     font-size: 1rem;
@@ -394,5 +348,16 @@ section {
 
   .about-section-container {
     flex-wrap: wrap;
+  }
+  /* About Section responsive */
+  .about-section-container-img {
+    background-size: cover;
+    width: 100%;
+  }
+  .about-section-container-describe{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
