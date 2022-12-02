@@ -170,6 +170,10 @@ float: left;
   margin-top: 1rem;
   margin-left: 3rem;
  }
+ .sub-heading{
+  color: var(--first-color);
+  margin-top: -1.5rem;
+ }
  /* // About section Css */
  #about-section{
  background-color: var(--body-color);
@@ -294,7 +298,7 @@ color: var(--third-color);
 font-size: var(--h3);
 }
 .section-title h4 {
-text-transform: uppercase;
+text-transform: upperc-1remase;
 font-size: 2rem;
 font-family: var(--font-family);
 position: relative;
@@ -386,7 +390,7 @@ font-size: 1rem;
 font-weight: 500;
 font-family: poppins;
 color: black;
-}
+}-1rem
 .timeline_content p {
   color: black;
 text-transform: capitalize!important;
@@ -509,9 +513,12 @@ text-transform: capitalize!important;
   }
  
   .d-flex{
-   x: 2.5!important;
+   /* x: 2.5!important; */
 flex-wrap: wrap;
   }
+  .sub-heading{
+    text-align: center;
+   }
   #about-section-describe{
     text-align: center;
     align-items: center;
