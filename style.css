@@ -2,7 +2,7 @@
 :root {
   --body-color: #fff;
   --font-family: "Poppins", sans-serif;
-  --hue-color: 143;
+  --hue-color: 43;
   --first-color: hsla(var(--hue-color), 76%, 52%, 1);
   --second-color: hsla(var(--hue-color), 49%, 55%, 1);
   --third-color: hsla(var(--hue-color), 31%, 59%, 1);
@@ -263,6 +263,12 @@ color: var(--first-color);
   background-color: var(--first-color)!important;
   z-index: -1!important;
   
+}
+#nav-profile-tab{
+  color: var(--first-color);
+}
+#nav-home-tab{
+  color: var(--first-color);
 }
 
 .nav-link ,  .nav-link.active  {
