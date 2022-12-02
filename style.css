@@ -242,6 +242,21 @@ color: var(--first-color);
 #hireme:hover{
   background: var(--second-color);
 }
+#social{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.social{
+  color: var(--first-color);
+  margin: 1rem 0 0 1rem;
+  font-size: var(--h1);
+
+}
+#social > a:hover{
+  color: var(--second-color);
+   
+}
 /* qualification section css */
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
   color:var(--body-color)!important;
@@ -390,7 +405,7 @@ font-size: 1rem;
 font-weight: 500;
 font-family: poppins;
 color: black;
-}-1rem
+}
 .timeline_content p {
   color: black;
 text-transform: capitalize!important;
@@ -523,6 +538,11 @@ flex-wrap: wrap;
     text-align: center;
     align-items: center;
     margin-left: 0;
+  }
+  #social{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
   }
   .timeline_content {
     overflow-y: hidden;
