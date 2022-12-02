@@ -8,12 +8,12 @@ let homeicon = document.getElementById("home-icon");
 let Sericon = document.getElementById("Ser-icon");
 let abouticon = document.getElementById("about-icon");
 let contactusicon = document.getElementById("contactus-icon");
-home.style.color = "var(--body-color)!important";
-homeicon.style.color = "var";
+home.style.color = "white";
+homeicon.style.color = "white";
 window.onload = (query) = () => {
   if (!b.matches) {
     const slideMenu1 = () => {
-      home.style.color = "var(--body-color)!importat";
+      home.style.color = "white";
       slider.style.left = "0";
       Ser.style.color = "var(--first-color)";
       about.style.color = "var(--first-color)";
@@ -21,7 +21,7 @@ window.onload = (query) = () => {
     };
 
     const slideMenu2 = () => {
-      Ser.style.color = "var(--body-color)!importat";
+      Ser.style.color = "white";
       slider.style.left = "25%";
       about.style.color = "var(--first-color)";
       contactus.style.color = "var(--first-color)";
@@ -29,7 +29,7 @@ window.onload = (query) = () => {
     };
 
     const slideMenu3 = () => {
-      about.style.color = "var(--body-color)!importat";
+      about.style.color = "white";
       slider.style.left = "50%";
       contactus.style.color = "var(--first-color)";
       Ser.style.color = "var(--first-color)";
@@ -37,7 +37,7 @@ window.onload = (query) = () => {
     };
 
     const slideMenu4 = () => {
-      contactus.style.color = "var(--body-color)!importat";
+      contactus.style.color = "white";
       slider.style.left = "75%";
       home.style.color = "var(--first-color)";
       about.style.color = "var(--first-color)";

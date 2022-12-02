@@ -58,7 +58,7 @@ header {
   width: 7rem;
   text-align: center;
   text-decoration: none;
-  color: var(--body-color)!important;
+  color: var(--first-color);
   font-family: var(--font-family);
   font-weight: 500;
 }
@@ -247,7 +247,6 @@ color: var(--first-color);
 }
 
 .nav-link ,  .nav-link.active  {
-  color: var(--first-color)!important;
   border-radius: 2rem!important;
 }
 .nav-link ,  .nav-link.active:hover{
