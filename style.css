@@ -1,16 +1,25 @@
+/* Google Fonts Poppins--------------- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap");
-
+/* CSS Variable ------------------ */
 :root {
   --body-color: #fff;
+  --font-color-light-theme:black;
+  --font-color-white:#fff;
+  /* color For Dark Theme----------- */
+  --body-color-dark-theme:23303;
+  --sub-body-color-dark-theme:354553;
+   --font-color-dark-theme:415362;
   --font-family: "Poppins", sans-serif;
   --hue-color: 243;
+  --hue-color1:150;
+  --hue-color2:50;
+  --hue-color3:10;
   --first-color: hsla(var(--hue-color), 76%, 52%, 1);
   --second-color: hsla(var(--hue-color), 49%, 55%, 1);
   --third-color: hsla(var(--hue-color), 31%, 59%, 1);
   --h1: 2rem;
   --h2: 1.5rem;
   --h3: 1rem;
-
 }
 
 * {
@@ -26,13 +35,12 @@ body {
   width: 100%;
   background: var(--body-color);
 }
-
+/* Header Section Css ----------------  */
 header {
   width: 100%;
   height: 22rem;
   background: var(--body-color);
 }
-
 #navbar {
   display: flex;
   flex-direction: row;
@@ -41,7 +49,6 @@ header {
   height: 4rem;
   align-items: center;
 }
-
 #logo {
   font-family: var(--font-family);
   color: var(--first-color);
@@ -49,10 +56,10 @@ header {
   font-weight: 600;
   margin-top: 1.2rem;
 }
-
 .menu-toggle {
   position: relative;
   display: flex;
+  background-color:var(--body-color);
   align-items: center;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   height: 2.5rem;
@@ -72,21 +79,26 @@ header {
   font-weight: 500;
 }
 
-#btn {
+#btn-me {
   display: inline;
-  cursor: pointer;
-  padding: 1rem;
+  padding: 1rem!important;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: var(--h3);
   background: var(--first-color);
-  color: var(--body-color);
-  border-radius: 2rem;
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
+  color: var(--font-color-white);
+  margin-top: 1rem!important;
+  padding: 0.5rem 1.5rem!important;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
-
+#btn-me:hover{
+  background-color:var(--second-color)!important;
+}
+#btn-me > a {
+  text-decoration:none;
+  color:var(--body-color)!important;
+}
+/* Tab Bar CSS  ---------------- */
 #slider {
   position: absolute;
   left: 0rem;
@@ -98,7 +110,7 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-/* header decoration  */
+/* Sub header decoration  -------------- */
 .sub_header {
   display: flex;
   width: 100%;
@@ -106,9 +118,7 @@ header {
   margin: 1rem 2rem;
   height: 70%;
   float: left;
-
 }
-
 #main_heading {
   z-index: 2;
   display: flex;
@@ -118,7 +128,7 @@ header {
   width: 50%;
   margin: 0 2.1rem;
 }
-
+/* Type Effect Css ----------  */
 .h1 {
   display: flex;
   z-index: 2;
@@ -127,13 +137,11 @@ header {
   font-size: var(--h1);
   font-weight: 600;
 }
-
 #discribe {
   font-family: var(--font-family);
   font-size: var(--h3);
   font-weight: 500;
 }
-
 .cursor {
   display: inline-block;
   height: 3rem;
@@ -143,7 +151,6 @@ header {
   margin-bottom: 1rem;
   animation: blink 1s infinite;
 }
-
 .typed-text {
   margin-left: 1rem;
   color: var(--first-color);
@@ -152,7 +159,6 @@ header {
 .cursor.typing {
   animation: none;
 }
-
 @keyframes blink {
   0% {
     background-color: rgb(0, 0, 0);
@@ -174,15 +180,12 @@ header {
     background-color: rgb(0, 0, 0);
   }
 }
-
 .container p span.cursor.typing {
   animation: none;
 }
-
 .nav-link-menu>.uil {
   display: none;
 }
-
 .myImg {
   background: linear-gradient(transparent, var(--first-color));
   display: block;
@@ -193,30 +196,24 @@ header {
   margin-top: 1rem;
   margin-left: 3rem;
 }
-
 .sub-heading {
   color: var(--first-color);
   margin-top: -1.5rem;
 }
-
-/* // About section Css */
+/* // About section Css -------------------*/
 #about-section {
   background-color: var(--body-color);
   margin-top: 1rem;
   margin-bottom: 1rem;
   clear: both;
   display: block;
-
   padding: 1rem;
-  /* box-shadow: 2px 1px 6px 3px rgb(0 0 0 / 25%); */
 }
-
 #about-section-container {
   text-align: center;
-  border-radius: 2rem !important;
+  border-radius: 2rem!important;
 }
-
-#tittle {
+#title {
   color: black;
   text-transform: uppercase;
   font-size: calc(var(--h3) + .7rem);
@@ -224,18 +221,15 @@ header {
   font-family: var(--font-family);
   font-weight: 700;
 }
-
 .d-flex {
   padding-bottom: 2rem;
   display: flex !important;
 }
-
-#myimg {
+#about-img {
   background-color: hsla(var(--hue-color), 31%, 59%, .5);
   box-shadow: 1px 1px 4px 2px rgb(0 0 0 / 25%);
   border-radius: 2rem;
 }
-
 #about-section-describe {
   text-align: start;
   margin-left: 2rem;
@@ -245,23 +239,20 @@ header {
   flex-direction: column;
 }
 
-.sub-tittle {
+.sub-title {
   font-family: var(--font-family);
   font-size: var(--h2);
   font-weight: 500;
   color: var(--first-color);
 }
-
-.sub-tittle-para {
+.sub-title-para {
   display: block;
   font-family: 'Poppins';
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2rem;
 }
-
-#hireme {
-  display: inline-block;
+.hireme {
   padding: 0.5rem 1.5rem;
   margin-top: 2rem;
   background: var(--first-color);
@@ -271,64 +262,50 @@ header {
   border-radius: 2rem;
   box-shadow: 2px 1px 5px 2px rgb(0 0 0 / 25%);
 }
-
-#hireme:hover {
-  background: var(--second-color);
+.hireme:hover {
+  background: var(--second-color)!important;
 }
-
+/* Social Css in About------- */
 #social {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
-
 .social {
   color: var(--first-color);
   margin: 1rem 0 0 1rem;
   font-size: var(--h1);
-
 }
-
 #social>a:hover {
   color: var(--second-color);
-
 }
 
-/* qualification section css */
+/* Capability section css -------------- */
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-  color: var(--body-color) !important;
+  color: var(--font-color-white) !important;
   background-color: var(--first-color) !important;
   z-index: -1 !important;
-
 }
-
 #nav-profile-tab {
   color: var(--first-color);
 }
-
 #nav-home-tab {
   color: var(--first-color);
 }
-
 .nav-link,
 .nav-link.active {
   border-radius: 2rem !important;
 }
-
 .nav-link,
 .nav-link.active:hover {
   border: none !important;
 }
-
 .nav-tabs {
   width: fit-content;
   z-index: -1 !important;
-
 }
-
-/* progress bar css */
-
+/* Progress Bar Css ----------------*/
 .progress {
   display: flex;
   background-color: var(--body-color) !important;
@@ -337,21 +314,19 @@ header {
   flex-direction: column;
   height: fit-content !important;
 }
-
 .progress-bar {
   background-color: var(--first-color) !important;
   margin: 1rem .5rem;
 }
-
 #progress-bar-label {
   font-size: var(--h3);
-  color: black;
+  color: var(--font-color-light-theme);
   text-transform: uppercase;
   margin: .5rem .5rem 0 1rem;
   font-weight: 600;
 }
 
-/* timeline css  */
+/* Timeline Css --------------- */
 .pt-100 {
   padding-top: 1rem;
 }
@@ -485,7 +460,7 @@ ul.timeline-list li:before {
 
 }
 
-/* card slider css  */
+/* Card Slider Css with Swiper */
 
 .swiper {
   width: 100%;
@@ -523,9 +498,10 @@ ul.timeline-list li:before {
   border-radius: 2rem!important;
   border: none!important;
 }
+/* Card Button CSS -------------- */
 .btn{
   background-color: var(--first-color)!important;
-  color: var(--body-color)!important;
+  color: var(--font-color-white)!important;
 }
 .btn:hover{
   background-color: var(--second-color);
@@ -538,7 +514,7 @@ ul.timeline-list li:before {
   font-family: var(--font-family);
   font-size: 1.5rem;
 }
-/* forms css ---------- */
+/* forms css ---------- ------- */
 #forms-section{
 border-radius: 2rem;
 padding: 1.5rem;
@@ -566,8 +542,12 @@ border: 2px solid var(--second-color)!important;
 .submit{
 margin-top:1.5rem;
 }
-
+.py-3{
+   height:11rem;
+}
+/* Screen  Meadia Quary CSS-------------- */
 @media only screen and (max-width: 768px) {
+  
   .menu-toggle {
     position: fixed;
     bottom: 0;
@@ -581,8 +561,7 @@ margin-top:1.5rem;
     width: 100%;
     border-radius: 2rem 2rem 0px 0px;
   }
-
-  #logo {
+#logo {
     font-size: var(--h2);
   }
 
@@ -594,16 +573,16 @@ margin-top:1.5rem;
     border-radius: 0 0 2rem 2rem;
   }
 
-  #btn {
-    margin-bottom: 0.4rem;
+#btn-me {
+    margin-bottom: 0.4rem!important;
   }
 
   #logo:hover {
     color: var(--third-color);
   }
 
-  #btn:hover {
-    background: var(--third-color);
+  #btn-me:hover {
+    background: var(--third-color)!important;
   }
 
   .nav-link-menu {
@@ -621,10 +600,6 @@ margin-top:1.5rem;
     font-size: var(--h2);
   }
 
-  #canvas {
-    z-index: -1;
-  }
-
   #slider {
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
     display: block;
@@ -638,7 +613,7 @@ margin-top:1.5rem;
     transition: all 0.3s ease-in-out;
   }
 
-  /* heading  */
+  /*section  heading ---------------- */
   .myImg {
     height: 12rem;
     width: 11rem;
@@ -694,7 +669,6 @@ margin-top:1.5rem;
   }
 
   .d-flex {
-    /* x: 2.5!important; */
     flex-wrap: wrap;
   }
 

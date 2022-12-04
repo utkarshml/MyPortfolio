@@ -1,96 +1,98 @@
-
+// Js Variables ---------------------
 var b = window.matchMedia("(max-width:768px)");
 let slider = document.getElementById("slider");
 let home = document.getElementById("home");
-let Ser = document.getElementById("Ser");
 let about = document.getElementById("about");
-let contactus = document.getElementById("contactus");
+let capability = document.getElementById("capability");
+let project = document.getElementById("project");
 let homeicon = document.getElementById("home-icon");
-let Sericon = document.getElementById("Ser-icon");
+let capabilityicon = document.getElementById("capability-icon");
 let abouticon = document.getElementById("about-icon");
-let contactusicon = document.getElementById("contactus-icon");
-home.style.color = "white";
-homeicon.style.color = "white";
+let projecticon = document.getElementById("project-icon");
+// Tab Bar Sliding Js --------------------
+home.style.color = "var(--font-color-white)";
+homeicon.style.color = "var(--font-color-white)";
 window.onload = (query) = () => {
-  if (!b.matches) {
+  if (!b.matches) //  match meadia js
+   {
     const slideMenu1 = () => {
-      home.style.color = "white";
+      home.style.color = "var(--font-color-white)";
       slider.style.left = "0";
-      Ser.style.color = "var(--first-color)";
+      capability.style.color = "var(--first-color)";
       about.style.color = "var(--first-color)";
-      contactus.style.color = "var(--first-color)";
+      project.style.color = "var(--first-color)";
     
     };
 
     const slideMenu2 = () => {
-      Ser.style.color = "white";
+      about.style.color = "var(--font-color-white)";
       slider.style.left = "25%";
-      about.style.color = "var(--first-color)";
-      contactus.style.color = "var(--first-color)";
+      capability.style.color = "var(--first-color)";
+      project.style.color = "var(--first-color)";
       home.style.color = "var(--first-color)";
     
     };
 
     const slideMenu3 = () => {
-      about.style.color = "white";
+      capability.style.color = "var(--font-color-white)";
       slider.style.left = "50%";
-      contactus.style.color = "var(--first-color)";
-      Ser.style.color = "var(--first-color)";
+      project.style.color = "var(--first-color)";
+      about.style.color = "var(--first-color)";
       home.style.color = "var(--first-color)";
  
     };
 
     const slideMenu4 = () => {
-      contactus.style.color = "white";
+      project.style.color = "var(--font-color-white)";
       slider.style.left = "75%";
       home.style.color = "var(--first-color)";
       about.style.color = "var(--first-color)";
-      Ser.style.color = "var(--first-color)";
+      capability.style.color = "var(--first-color)";
     
     };
     home.addEventListener("click", slideMenu1);
-    Ser.addEventListener("click", slideMenu2);
-    about.addEventListener("click", slideMenu3);
-    contactus.addEventListener("click", slideMenu4);
+    about.addEventListener("click", slideMenu2);
+    capability.addEventListener("click", slideMenu3);
+    project.addEventListener("click", slideMenu4);
   } else {
     const slideMenu1 = () => {
       slider.style.left = "0%";
-      homeicon.style.color = "white";
-      Sericon.style.color = "var(--first-color)";
+      homeicon.style.color = "var(--font-color-white)";
+      capabilityicon.style.color = "var(--first-color)";
       abouticon.style.color = "var(--first-color)";
-      contactusicon.style.color = "var(--first-color)";
+      project.style.color = "var(--first-color)";
       document.location.href = "#home-section";
     };
 
     homeicon.addEventListener("click", slideMenu1);
     const slideMenu2 = () => {
       slider.style.left = "25%";
-      Sericon.style.color = "white";
-      abouticon.style.color = "var(--first-color)";
-      contactusicon.style.color = "var(--first-color)";
-      homeicon.style.color = "var(--first-color)";
-      document.location.href = "#service-section";
-    };
-    Sericon.addEventListener("click", slideMenu2);
-
-    const slideMenu3 = () => {
-      slider.style.left = "50%";
-      abouticon.style.color = "white";
-      contactusicon.style.color = "var(--first-color)";
-      Sericon.style.color = "var(--first-color)";
+      abouticon.style.color = "var(--font-color-white)";
+      capabilityicon.style.color = "var(--first-color)";
+      projecticon.style.color = "var(--first-color)";
       homeicon.style.color = "var(--first-color)";
       document.location.href = "#about-section";
     };
-    abouticon.addEventListener("click", slideMenu3);
+    abouticon.addEventListener("click", slideMenu2);
+
+    const slideMenu3 = () => {
+      slider.style.left = "50%";
+      capabilityicon.style.color = "var(--font-color-white)";
+      projecticon.style.color = "var(--first-color)";
+      abouticon.style.color = "var(--first-color)";
+      homeicon.style.color = "var(--first-color)";
+      document.location.href = "#capability-section";
+    };
+    capabilityicon.addEventListener("click", slideMenu3);
     const slideMenu4 = () => {
       slider.style.left = "75%";
-      contactusicon.style.color = "white";
+      projecticon.style.color = "white";
       homeicon.style.color = "var(--first-color)";
       abouticon.style.color = "var(--first-color)";
-      Sericon.style.color = "var(--first-color)";
-      document.location.href = "#home-section";
+      capabilityicon.style.color = "var(--first-color)";
+      document.location.href = "#project-section";
     };
-    contactusicon.addEventListener("click", slideMenu4);
+    projecticon.addEventListener("click", slideMenu4);
   }
 };
 b.addEventListener("change", query)
@@ -142,5 +144,5 @@ document.addEventListener("DOMContentLoaded", function () {
   // On DOM Load initiate the effect
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
-// Service js 
+
 
