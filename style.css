@@ -134,10 +134,11 @@ header {
 
 .cursor {
   display: inline-block;
-  height: 4rem;
+  height: 3rem;
   background-color: rgb(0, 0, 0);
   margin-left: 0.1rem;
   width: 3px;
+  margin-bottom: 1rem;
   animation: blink 1s infinite;
 }
 
@@ -515,7 +516,7 @@ ul.timeline-list li:before {
   object-fit: cover;
 }
 .card{
-  background-color: var(--body-color);
+  background-color: var(--body-color)!important;
   width: 34rem!important;
   border-radius: 2rem!important;
   border: none!important;
@@ -649,7 +650,7 @@ ul.timeline-list li:before {
 
   .cursor {
     display: inline-block;
-    height: 3.7rem;
+    height: 3rem;
     background-color: rgb(0, 0, 0);
     margin-left: 0.1rem;
     width: 3px;
