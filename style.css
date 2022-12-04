@@ -518,6 +518,7 @@ ul.timeline-list li:before {
   background-color: var(--body-color);
   width: 34rem!important;
   border-radius: 2rem!important;
+  border: none!important;
 }
 .btn{
   background-color: var(--first-color)!important;
