@@ -3,7 +3,7 @@
 :root {
   --body-color: #fff;
   --font-family: "Poppins", sans-serif;
-  --hue-color: 43;
+  --hue-color: 243;
   --first-color: hsla(var(--hue-color), 76%, 52%, 1);
   --second-color: hsla(var(--hue-color), 49%, 55%, 1);
   --third-color: hsla(var(--hue-color), 31%, 59%, 1);
@@ -20,7 +20,7 @@
 }
 
 body {
-
+  position: relative;
   scroll-behavior: smooth;
   background: var(--body-color);
 }
@@ -484,32 +484,51 @@ ul.timeline-list li:before {
 
 /* card slider css  */
 
-/* @media (max-width:991.98px) {
-  .padding {
-    padding: 1.5rem
-  }
+.swiper {
+  width: 100%;
+  height: 100%;
 }
 
-@media (max-width:767.98px) {
-  .padding {
-    padding: 1rem
-  }
-} */
-
-#service-section{
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: row;
-  z-index: -1;
-  position: relative;
-  padding: 1rem;
-  overflow: hidden;
-  height:39rem;
-}
-#service-section > .container{
-  display: flex;
-  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card{
+  background-color: var(--body-color);
+  width: 34rem!important;
+  border-radius: 2rem!important;
+}
+.btn{
+  background-color: var(--first-color)!important;
+  color: var(--body-color)!important;
+}
+.card-title{
+  color: var(--first-color)!important;
+  font-weight: 500;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+}
 @media only screen and (max-width: 768px) {
   .menu-toggle {
     position: fixed;

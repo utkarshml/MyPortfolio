@@ -1,3 +1,4 @@
+
 var b = window.matchMedia("(max-width:768px)");
 let slider = document.getElementById("slider");
 let home = document.getElementById("home");
