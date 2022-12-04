@@ -29,11 +29,11 @@
     z-index: -1;
     width: 100%;
     height: fit-content;
-   
+
   }
 
   .swiper-slide {
-    
+
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -52,9 +52,11 @@
     -webkit-align-items: center;
     align-items: center;
   }
-  .swiper-wrapper{
-    height: fit-content!important;
+
+  .swiper-wrapper {
+    height: fit-content !important;
     margin-top: 3rem;
+    margin-bottom: 4rem;
   }
 
   .swiper-slide img {
@@ -85,7 +87,7 @@
           <a id="about" href="#" class="nav-link">About</a><i id="about-icon" class="uil uil-user-circle"><a
               href="#about-section" style="text-decoration: none;">&nbsp;</a></i>
         </div>
-        <div class="nav-link-menu">
+        <div  class="nav-link-menu">
           <a id="contactus" href="#" class="nav-link">Contactus</a><i id="contactus-icon"
             class="uil uil-phone-volume"><a href="#" style="text-decoration: none;">&nbsp;</a></i>
         </div>
@@ -213,45 +215,57 @@
   <!-- project section html  -->
   <!-- Swiper -->
   <div class="swiper mySwiper container">
-      <div class="col-xl-8 mx-auto text-center">
-                <div class="section-title">
-                  <h4>My life journy </h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                </div>
-              </div>
-    <div class="swiper-wrapper"> 
-      <div class="swiper-slide"><div class="card shadow " style="width: 18rem;">
-        <img class="card-img-top" src="Img/css.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn  rounded-pill ">Go somewhere</a>
+    <div class="col-xl-8 mx-auto text-center">
+      <div class="section-title">
+        <h4>My life journy </h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+      </div>
+    </div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card shadow " style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn  rounded-pill ">Go somewhere</a>
+          </div>
         </div>
-      </div></div>
-      <div class="swiper-slide"><div class="card shadow " style="width: 18rem;">
-        <img class="card-img-top" src="Img/css.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary rounded-pill">Go somewhere</a>
+      </div>
+      <div class="swiper-slide">
+        <div class="card shadow " style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary rounded-pill">Go somewhere</a>
+          </div>
         </div>
-      </div></div>
-      <div class="swiper-slide"><div class="card shadow " style="width: 18rem;">
-        <img class="card-img-top" src="Img/css.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary rounded-pill ">Go somewhere</a>
+      </div>
+      <div class="swiper-slide">
+        <div class="card shadow " style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary rounded-pill ">Go somewhere</a>
+          </div>
         </div>
-      </div></div>
-      <div class="swiper-slide"><div class="card shadow " style="width: 18rem;">
-        <img class="card-img-top" src="Img/css.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary rounded-pill">Go somewhere</a>
+      </div>
+      <div class="swiper-slide">
+        <div class="card shadow " style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary rounded-pill">Go somewhere</a>
+          </div>
         </div>
-      </div></div>
+      </div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
@@ -264,8 +278,8 @@
     slidesPerView: 2,
     spaceBetween: 30,
     autoplay: {
-      delay:2500,
-      disableOnInteraction:false
+      delay: 2500,
+      disableOnInteraction: false
     },
     pagination: {
       el: ".swiper-pagination",
@@ -273,14 +287,14 @@
     },
     breakpoints: {
       1: {
-        slidesPerView:1,
+        slidesPerView: 1,
       },
       640: {
-        slidesPerView:2,
+        slidesPerView: 2,
 
       },
-      1024:{
-        slidesPerView:3,
+      1024: {
+        slidesPerView: 3,
       },
     },
 
@@ -289,4 +303,5 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" <!--
   integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
 </html>

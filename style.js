@@ -19,6 +19,7 @@ window.onload = (query) = () => {
       Ser.style.color = "var(--first-color)";
       about.style.color = "var(--first-color)";
       contactus.style.color = "var(--first-color)";
+    
     };
 
     const slideMenu2 = () => {
@@ -27,6 +28,7 @@ window.onload = (query) = () => {
       about.style.color = "var(--first-color)";
       contactus.style.color = "var(--first-color)";
       home.style.color = "var(--first-color)";
+    
     };
 
     const slideMenu3 = () => {
@@ -35,6 +37,7 @@ window.onload = (query) = () => {
       contactus.style.color = "var(--first-color)";
       Ser.style.color = "var(--first-color)";
       home.style.color = "var(--first-color)";
+ 
     };
 
     const slideMenu4 = () => {
@@ -43,6 +46,7 @@ window.onload = (query) = () => {
       home.style.color = "var(--first-color)";
       about.style.color = "var(--first-color)";
       Ser.style.color = "var(--first-color)";
+    
     };
     home.addEventListener("click", slideMenu1);
     Ser.addEventListener("click", slideMenu2);
@@ -55,6 +59,7 @@ window.onload = (query) = () => {
       Sericon.style.color = "var(--first-color)";
       abouticon.style.color = "var(--first-color)";
       contactusicon.style.color = "var(--first-color)";
+      document.location.href = "#home-section";
     };
 
     homeicon.addEventListener("click", slideMenu1);
@@ -64,6 +69,7 @@ window.onload = (query) = () => {
       abouticon.style.color = "var(--first-color)";
       contactusicon.style.color = "var(--first-color)";
       homeicon.style.color = "var(--first-color)";
+      document.location.href = "#service-section";
     };
     Sericon.addEventListener("click", slideMenu2);
 
@@ -73,6 +79,7 @@ window.onload = (query) = () => {
       contactusicon.style.color = "var(--first-color)";
       Sericon.style.color = "var(--first-color)";
       homeicon.style.color = "var(--first-color)";
+      document.location.href = "#about-section";
     };
     abouticon.addEventListener("click", slideMenu3);
     const slideMenu4 = () => {
@@ -81,6 +88,7 @@ window.onload = (query) = () => {
       homeicon.style.color = "var(--first-color)";
       abouticon.style.color = "var(--first-color)";
       Sericon.style.color = "var(--first-color)";
+      document.location.href = "#home-section";
     };
     contactusicon.addEventListener("click", slideMenu4);
   }
