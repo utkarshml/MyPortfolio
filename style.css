@@ -260,7 +260,7 @@ header {
 
 #hireme {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1.5rem;
   margin-top: 2rem;
   background: var(--first-color);
   color: var(--body-color);
