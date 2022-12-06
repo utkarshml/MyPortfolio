@@ -4,9 +4,9 @@
 :root {
     /* color For Dark Theme----------- */
     
-  --body-color: #fff; /* rgb(45, 47, 57) */
-  --sub-body-color:#fff;/*#060b25 */
-  --font-color:black;/* rgb(241, 233, 233)*/
+  --body-color:  rgb(45, 47, 57); /* rgb(45, 47, 57) */
+  --sub-body-color:#060b25;/*#060b25 */
+  --font-color: rgb(241, 233, 233);/* rgb(241, 233, 233)*/
   --font-color2:white;
   --font-family: "Poppins", sans-serif;
   --hue-color: 20; /* 150 , 243 , 43 */
@@ -66,7 +66,7 @@ header {
   height: 2.5rem;
   width: max-content;
   margin-top: 1em;
-  border-radius: 1rem;
+  border-radius: 2rem;
 }
 
 .nav-link-menu {
@@ -315,7 +315,7 @@ background-color: var(--first-color);
   margin: 1rem 0 0 1rem;
   font-size: var(--h1);
 }
-#social>a:hover {
+#social > a:hover {
   color: var(--second-color);
 }
 
@@ -603,6 +603,7 @@ footer{
 /* Screen  Meadia Quary CSS-------------- */
 @media only screen and (max-width: 768px) {
 #navbar{
+  position: relative;
   background-color: var(--sub-body-color)!important;
 }
   .menu-toggle {
