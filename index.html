@@ -74,7 +74,7 @@
       <div id="logo">
         <span>Utkarsh</span>
       </div>
-      <div class="menu-toggle">
+      <div id="menu-toggle" class="menu-toggle">
         <div class="nav-link-menu">
           <a id="home" href="#home-section" class="nav-link">Home</a>
           <i id="home-icon" class="uil uil-estate "></i>
@@ -82,15 +82,15 @@
 
         <div class="nav-link-menu">
           <a id="about" href="#about-section" class="nav-link">About</a><i id="about-icon"
-            class="uil uil-user-circle"></i>
+            class="uil uil-user"></i>
         </div>
         <div class="nav-link-menu">
           <a id="capability" href="#capability-section" class="nav-link active">Capability</a><i id="capability-icon"
-            class="uil uil-bag-alt"></i>
+            class="uil uil-book-open"></i>
         </div>
         <div class="nav-link-menu">
           <a id="project" href="#project-section" class="nav-link">Projects</a><i id="project-icon"
-            class="uil uil-phone-volume"><a href="#" style="text-decoration: none;">&nbsp;</a></i>
+            class="uil uil-bag-alt"><a href="#" style="text-decoration: none;">&nbsp;</a></i>
         </div>
         <div id="slider"></div>
       </div>
@@ -98,6 +98,9 @@
     </div>
     <!-- Header Heading Sub-Section ---------------->
     <div class="sub_header">
+   <select name="color-select" id="color-select">
+    <option value="1"><div></div></option>
+   </select>
       <div id="main_heading">
         <div class="h1">Hi , I'm<span class="typed-text"></span><span class="cursor">&nbsp;</span>
         </div><span class="sub-heading">Full Stack Devoloper</span>
@@ -215,7 +218,7 @@
   <div  id="project-section" class="swiper mySwiper container">
     <div class="col-xl-8 mx-auto text-center">
       <div class="section-title">
-        <h4>My Project </h4>
+        <h4>My Projects </h4>
       </div>
     </div>
     <div class="swiper-wrapper">
@@ -268,8 +271,8 @@
   </div>
   <!-- forms section ---------------------- -->
   <section id="forms-section" class="container shadow-lg ">
-    <form class="container">
-      <div class="form-group ">
+    <form  class="container">
+      <div id="forms-container" class="form-group ">
         <label for="text">Name</label>
         <input type="text" class="form-control rounded-pill" id="text" placeholder="Enter Your Name Please">
 

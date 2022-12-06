@@ -9,14 +9,16 @@ let homeicon = document.getElementById("home-icon");
 let capabilityicon = document.getElementById("capability-icon");
 let abouticon = document.getElementById("about-icon");
 let projecticon = document.getElementById("project-icon");
+let navbar =  document.getElementById("navbar");
+let menutoggle = document.getElementById('menu-toggle');
 // Tab Bar Sliding Js --------------------
-home.style.color = "var(--font-color-white)";
-homeicon.style.color = "var(--font-color-white)";
+home.style.color = "var(--font-color2)";
+homeicon.style.color = "var(--font-color2)";
 window.onload = (query) = () => {
   if (!b.matches) //  match meadia js
    {
     const slideMenu1 = () => {
-      home.style.color = "var(--font-color-white)";
+      home.style.color = "var(--font-color2)";
       slider.style.left = "0";
       capability.style.color = "var(--first-color)";
       about.style.color = "var(--first-color)";
@@ -25,7 +27,7 @@ window.onload = (query) = () => {
     };
 
     const slideMenu2 = () => {
-      about.style.color = "var(--font-color-white)";
+      about.style.color = "var(--font-color2)";
       slider.style.left = "25%";
       capability.style.color = "var(--first-color)";
       project.style.color = "var(--first-color)";
@@ -34,7 +36,7 @@ window.onload = (query) = () => {
     };
 
     const slideMenu3 = () => {
-      capability.style.color = "var(--font-color-white)";
+      capability.style.color = "var(--font-color2)";
       slider.style.left = "50%";
       project.style.color = "var(--first-color)";
       about.style.color = "var(--first-color)";
@@ -43,13 +45,29 @@ window.onload = (query) = () => {
     };
 
     const slideMenu4 = () => {
-      project.style.color = "var(--font-color-white)";
+      project.style.color = "var(--font-color2)";
       slider.style.left = "75%";
       home.style.color = "var(--first-color)";
       about.style.color = "var(--first-color)";
       capability.style.color = "var(--first-color)";
     
     };
+    // scrolling function for header 
+const scrollfuction = () =>{
+  if(window.pageYOffset > 1){
+    navbar.style.background = "var(--sub-body-color)";
+    menutoggle.style.boxShadow = "none";
+    navbar.style.boxShadow = "0 2px 4px 0 rgba(0, 0, 0, 0.2)";
+  }
+else{
+  navbar.style.background = "none";
+  navbar.style.boxShadow = "none"
+  menutoggle.style.boxShadow = "0 2px 4px 0 rgba(0, 0, 0, 0.2)";
+}
+}
+window.addEventListener("scroll",scrollfuction)
+
+
     home.addEventListener("click", slideMenu1);
     about.addEventListener("click", slideMenu2);
     capability.addEventListener("click", slideMenu3);
@@ -57,17 +75,17 @@ window.onload = (query) = () => {
   } else {
     const slideMenu1 = () => {
       slider.style.left = "0%";
-      homeicon.style.color = "var(--font-color-white)";
+      homeicon.style.color = "var(--font-color2)";
       capabilityicon.style.color = "var(--first-color)";
       abouticon.style.color = "var(--first-color)";
-      project.style.color = "var(--first-color)";
+      projecticon.style.color = "var(--first-color)";
       document.location.href = "#home-section";
     };
 
     homeicon.addEventListener("click", slideMenu1);
     const slideMenu2 = () => {
       slider.style.left = "25%";
-      abouticon.style.color = "var(--font-color-white)";
+      abouticon.style.color = "var(--font-color2)";
       capabilityicon.style.color = "var(--first-color)";
       projecticon.style.color = "var(--first-color)";
       homeicon.style.color = "var(--first-color)";
@@ -77,7 +95,7 @@ window.onload = (query) = () => {
 
     const slideMenu3 = () => {
       slider.style.left = "50%";
-      capabilityicon.style.color = "var(--font-color-white)";
+      capabilityicon.style.color = "var(--font-color2)";
       projecticon.style.color = "var(--first-color)";
       abouticon.style.color = "var(--first-color)";
       homeicon.style.color = "var(--first-color)";
@@ -86,7 +104,7 @@ window.onload = (query) = () => {
     capabilityicon.addEventListener("click", slideMenu3);
     const slideMenu4 = () => {
       slider.style.left = "75%";
-      projecticon.style.color = "white";
+      projecticon.style.color = "var(--font-color2)";
       homeicon.style.color = "var(--first-color)";
       abouticon.style.color = "var(--first-color)";
       capabilityicon.style.color = "var(--first-color)";
@@ -144,5 +162,3 @@ document.addEventListener("DOMContentLoaded", function () {
   // On DOM Load initiate the effect
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
-
-

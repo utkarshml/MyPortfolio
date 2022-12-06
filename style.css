@@ -2,18 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap");
 /* CSS Variable ------------------ */
 :root {
-  --body-color: #fff;
-  --font-color-light-theme:black;
-  --font-color-white:#fff;
-  /* color For Dark Theme----------- */
-  --body-color-dark-theme:23303;
-  --sub-body-color-dark-theme:354553;
-   --font-color-dark-theme:415362;
+    /* color For Dark Theme----------- */
+    
+  --body-color: #fff; /* rgb(45, 47, 57) */
+  --sub-body-color:#fff;/*#060b25 */
+  --font-color:black;/* rgb(241, 233, 233)*/
+  --font-color2:white;
   --font-family: "Poppins", sans-serif;
-  --hue-color: 243;
-  --hue-color1:150;
-  --hue-color2:50;
-  --hue-color3:10;
+  --hue-color: 20; /* 150 , 243 , 43 */
   --first-color: hsla(var(--hue-color), 76%, 52%, 1);
   --second-color: hsla(var(--hue-color), 49%, 55%, 1);
   --third-color: hsla(var(--hue-color), 31%, 59%, 1);
@@ -29,24 +25,29 @@
 }
 
 body {
+  background-color: var(--body-color)!important;
   position: relative;
   scroll-behavior: smooth;
   height: 100%;
   width: 100%;
-  background: var(--body-color);
+
 }
 /* Header Section Css ----------------  */
 header {
   width: 100%;
-  height: 22rem;
-  background: var(--body-color);
+  height: 5rem;
+  background: var(--sub-body-color)!important;
 }
 #navbar {
+  position: fixed;
+  top: 0;
+  padding-bottom: .6rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  height: 4rem;
+  height: 6rem;
+  transition: .5s;
   align-items: center;
 }
 #logo {
@@ -59,7 +60,7 @@ header {
 .menu-toggle {
   position: relative;
   display: flex;
-  background-color:var(--body-color);
+  background-color:var(--sub-body-color)!important;
   align-items: center;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   height: 2.5rem;
@@ -86,7 +87,7 @@ header {
   font-weight: 500;
   font-size: var(--h3);
   background: var(--first-color);
-  color: var(--font-color-white);
+  color: var(--font-color);
   margin-top: 1rem!important;
   padding: 0.5rem 1.5rem!important;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -96,7 +97,7 @@ header {
 }
 #btn-me > a {
   text-decoration:none;
-  color:var(--body-color)!important;
+  color:var(--font-color2)!important;
 }
 /* Tab Bar CSS  ---------------- */
 #slider {
@@ -112,12 +113,45 @@ header {
 
 /* Sub header decoration  -------------- */
 .sub_header {
+  z-index: -1;
+  position: relative;
   display: flex;
   width: 100%;
-  height: 100%;
-  margin: 1rem 2rem;
-  height: 70%;
+  margin-top: 5rem;
+  padding: 0 2rem;
+  height: 17rem;
   float: left;
+}
+#color-select{
+ display: block;
+  position: absolute;
+  top: 2.5rem;
+  border: none!important;
+  right: 0rem;
+  width: .7rem !important;
+  height: 2rem !important;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.color-selection{
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  border: 5px solid transparent;
+
+}
+.color-selection1{
+background-color: var(--first-color);
+
+}
+.color-selection2{
+  background-color: var(--first-color);
+}
+.color-selection3{
+  background-color: var(--first-color);
+}
+.color-selection4{
+  background-color: var(--first-color);
 }
 #main_heading {
   z-index: 2;
@@ -131,6 +165,7 @@ header {
 /* Type Effect Css ----------  */
 .h1 {
   display: flex;
+  color: var(--font-color);
   z-index: 2;
   position: relative;
   font-family: var(--font-family);
@@ -138,6 +173,7 @@ header {
   font-weight: 600;
 }
 #discribe {
+  color: var(--font-color);
   font-family: var(--font-family);
   font-size: var(--h3);
   font-weight: 500;
@@ -202,7 +238,7 @@ header {
 }
 /* // About section Css -------------------*/
 #about-section {
-  background-color: var(--body-color);
+  
   margin-top: 1rem;
   margin-bottom: 1rem;
   clear: both;
@@ -210,11 +246,12 @@ header {
   padding: 1rem;
 }
 #about-section-container {
+  background-color: var(--sub-body-color)!important;
   text-align: center;
   border-radius: 2rem!important;
 }
 #title {
-  color: black;
+  color: var(--font-color);
   text-transform: uppercase;
   font-size: calc(var(--h3) + .7rem);
   padding: 1rem 0rem 1rem 0;
@@ -231,6 +268,7 @@ header {
   border-radius: 2rem;
 }
 #about-section-describe {
+  color: var(--font-color);
   text-align: start;
   margin-left: 2rem;
   margin-top: 1.5rem;
@@ -247,6 +285,7 @@ header {
 }
 .sub-title-para {
   display: block;
+  color: var(--font-color);
   font-family: 'Poppins';
   font-size: 1rem;
   font-weight: 500;
@@ -256,7 +295,7 @@ header {
   padding: 0.5rem 1.5rem;
   margin-top: 2rem;
   background: var(--first-color);
-  color: var(--body-color);
+  color: var(--font-color2)!important;
   text-decoration: none;
   font-size: var(--h2);
   border-radius: 2rem;
@@ -283,8 +322,10 @@ header {
 /* Capability section css -------------- */
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-  color: var(--font-color-white) !important;
   background-color: var(--first-color) !important;
+  border: none!important;
+  color: var(--font-color2) !important;
+ 
   z-index: -1 !important;
 }
 #nav-profile-tab {
@@ -303,12 +344,16 @@ header {
 }
 .nav-tabs {
   width: fit-content;
+  border: none!important;
   z-index: -1 !important;
 }
+/* #nav-tab{
+  background-color: var(--sub-body-color);
+} */
 /* Progress Bar Css ----------------*/
 .progress {
   display: flex;
-  background-color: var(--body-color) !important;
+  background-color: var(--sub-body-color) !important;
   margin: 1rem;
   border-radius: 2rem !important;
   flex-direction: column;
@@ -320,7 +365,7 @@ header {
 }
 #progress-bar-label {
   font-size: var(--h3);
-  color: var(--font-color-light-theme);
+  color: var(--font-color);
   text-transform: uppercase;
   margin: .5rem .5rem 0 1rem;
   font-weight: 600;
@@ -336,6 +381,7 @@ header {
 }
 
 .section-title {
+  color: var(--font-color);
   margin-bottom: .5rem;
 }
 
@@ -447,11 +493,11 @@ ul.timeline-list li:before {
   font-size: 1rem;
   font-weight: 500;
   font-family: poppins;
-  color: black;
+  color: var(--font-color)!important;
 }
 
 .timeline_content p {
-  color: black;
+  color: var(--font-color)!important;
   text-transform: capitalize !important;
 }
 
@@ -470,7 +516,7 @@ ul.timeline-list li:before {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background-color: var(--body-color);
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -493,7 +539,7 @@ ul.timeline-list li:before {
   object-fit: cover;
 }
 .card{
-  background-color: var(--body-color)!important;
+  background-color: var(--sub-body-color)!important;
   width: 34rem!important;
   border-radius: 2rem!important;
   border: none!important;
@@ -501,7 +547,7 @@ ul.timeline-list li:before {
 /* Card Button CSS -------------- */
 .btn{
   background-color: var(--first-color)!important;
-  color: var(--font-color-white)!important;
+  color: var(--font-color2)!important;
 }
 .btn:hover{
   background-color: var(--second-color);
@@ -516,16 +562,20 @@ ul.timeline-list li:before {
 }
 /* forms css ---------- ------- */
 #forms-section{
+  background-color: var(--sub-body-color);
 border-radius: 2rem;
 padding: 1.5rem;
 }
+
 label{
+  color: var(--font-color);
   font-family: var(--font-family);
   font-weight: 600;
   padding-left: 1rem;
   font-size: 1.2rem!important;
 }
 .form-control{
+  background-color: var(--body-color)!important;
   height: calc(2.5em + .75rem + 2px)!important;
   border: 2px solid var(--first-color)!important;
   padding-left: 2rem!important;
@@ -544,17 +594,24 @@ margin-top:1.5rem;
 }
 .py-3{
    height:11rem;
+
 }
+footer{
+  background-color: var(--sub-body-color);
+}
+
 /* Screen  Meadia Quary CSS-------------- */
 @media only screen and (max-width: 768px) {
-  
+#navbar{
+  background-color: var(--sub-body-color)!important;
+}
   .menu-toggle {
     position: fixed;
     bottom: 0;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    background: var(--body-color);
+    background: var(--sub-body-color);
     align-items: center;
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
     height: 3rem;
@@ -623,10 +680,10 @@ margin-top:1.5rem;
   .sub_header {
 
     display: flex;
+    margin-top: 7rem;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    margin: 1rem 0;
     height: max-content;
     flex-wrap: wrap-reverse;
   }
@@ -715,7 +772,7 @@ margin-top:1.5rem;
   }
 
   .timeline_content p {
-    color: black;
+    color:var(--font-color2);
     font-size: .8rem;
   }
 }
